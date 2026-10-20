@@ -1,0 +1,83 @@
+{
+  "project": "ai-network-traffic-lab",
+  "executed_at_utc": "2026-10-20T09:41:29.589781+00:00",
+  "status": "reconstructed_from_source_and_executed",
+  "data_origin": "20 synthetic educational pairs from the supplied lab PDF",
+  "split": {
+    "train_size": 16,
+    "test_size": 4,
+    "random_state": 42,
+    "shuffle": true,
+    "train_rows_0based": [
+      8,
+      5,
+      11,
+      3,
+      18,
+      16,
+      13,
+      2,
+      9,
+      19,
+      4,
+      12,
+      7,
+      10,
+      14,
+      6
+    ],
+    "test_rows_0based": [
+      0,
+      17,
+      15,
+      1
+    ]
+  },
+  "model": {
+    "intercept_mbps": 4.672900015080685,
+    "slope_mbps_per_user": 1.5103001055647716
+  },
+  "test_metrics": {
+    "mae_mbps": 0.36212486804404787,
+    "mse_mbps_squared": 0.21996512020959738,
+    "r2": 0.9999369671008623
+  },
+  "mean_baseline_test_metrics": {
+    "constant_mbps": 93.875,
+    "mae_mbps": 58.75,
+    "mse_mbps_squared": 3624.828125,
+    "r2": -0.038725709680307974,
+    "provenance": "extension_reproduction"
+  },
+  "largest_test_residual": {
+    "utilisateurs": 95,
+    "residu_mbps": 0.8485899562660393
+  },
+  "source_scenario": {
+    "utilisateurs": 110,
+    "observed_mbps": 220,
+    "predicted_mbps": 170.80591162720555,
+    "residual_mbps": 49.194088372794454,
+    "arbitrary_threshold_mbps": 40,
+    "rule": "abs(residual) > threshold",
+    "investigate": true,
+    "confirmed_attack": null,
+    "attack_status": "not_established"
+  },
+  "limitations": [
+    "synthetic data",
+    "four test observations",
+    "no attack labels",
+    "110 users is outside the observed 10-105 range",
+    "uncalibrated threshold",
+    "no production validation"
+  ],
+  "execution_versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "pandas": "3.0.1",
+    "scikit_learn": "1.9.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}

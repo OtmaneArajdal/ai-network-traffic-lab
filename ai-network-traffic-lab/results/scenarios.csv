@@ -1,0 +1,5 @@
+utilisateurs,trafic_observe_mbps,provenance,trafic_predit_mbps,residu_mbps,seuil_absolu_mbps,a_investiguer
+110,160,extension_reproduction,170.80591162720555,-10.805911627205546,40,False
+110,180,extension_reproduction,170.80591162720555,9.194088372794454,40,False
+110,220,cas_documente_source,170.80591162720555,49.194088372794454,40,True
+110,120,extension_reproduction,170.80591162720555,-50.805911627205546,40,True
